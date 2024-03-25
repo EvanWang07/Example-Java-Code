@@ -1,5 +1,7 @@
 package com.examples;
 
+import java.util.ArrayList;
+
 public class Coin {
     private int heads;
     private int tails;
@@ -94,6 +96,43 @@ public class Coin {
             System.out.println("Successfully reached the target amount for heads in " + trialsTaken + " trials, totalling " + flipsTaken + " flips");
         } else {
             System.out.println("Successfully reached the target amount for tails in " + trialsTaken + " trials, totalling " + flipsTaken + " flips");
+        }
+    }
+
+    public void flipCoinSimulation(int flipsPerTrial, int amountOfTrials, String graphType) {
+        ArrayList<Integer> headsInPastTrials = new ArrayList<Integer>();
+        ArrayList<Integer> tailsInPastTrials = new ArrayList<Integer>();
+        ArrayList<Integer> differenceInPastTrails = new ArrayList<Integer>();
+        for (int trialsFinished = 0; trialsFinished < amountOfTrials; trialsFinished++) {
+            flipCoin(flipsPerTrial, true);
+            headsInPastTrials.add(heads);
+            tailsInPastTrials.add(tails);
+            differenceInPastTrails.add(heads - tails);
+        }
+        if (graphType.equals("HEADS") || graphType.equals("heads") || graphType.equals("Heads")) {
+            System.out.println("HEADS DATA FROM " + amountOfTrials + " TRIALS INVOLVING " + flipsPerTrial + " FLIPS PER TRIAL:");
+            for (int a = 0; a <= flipsPerTrial; a++) {
+                System.out.print(a + ": ");
+                for (int b = 0; b < headsInPastTrials.size(); b++) {
+                    if (headsInPastTrials.get(b) == a) {
+                        System.out.print("X");
+                    }
+                }
+                System.out.println("");
+            }
+        } else if (graphType.equals("TAILS") || graphType.equals("tails") || graphType.equals("Tails")) {
+            System.out.println("TAILS DATA FROM " + amountOfTrials + " TRIALS INVOLVING " + flipsPerTrial + " FLIPS PER TRIAL:");
+            for (int a = 0; a <= flipsPerTrial; a++) {
+                System.out.print(a + ": ");
+                for (int b = 0; b < tailsInPastTrials.size(); b++) {
+                    if (tailsInPastTrials.get(b) == a) {
+                        System.out.print("X");
+                    }
+                }
+                System.out.println("");
+            }
+        } else {
+            System.out.println("[flipCoinSimulation] ERROR: Invalid graphType used, check the parameters used in the method calling!");
         }
     }
 
