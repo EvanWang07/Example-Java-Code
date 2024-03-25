@@ -38,6 +38,29 @@ public class Main {
          * DO NOT add the variable type before the name as that is ONLY for DECLARING variables
          */
 
+        integer++; // Adds 1 to the value of integer
+        integer--; // Subtracts 1 from the value of integer
+        integer += 5; // Adds 5 to the value of integer
+        integer -= 5; // Subtracts 5 from the value of integer
+        integer *= 2; // Multiplies the value of integer by 2
+        integer /= 2; // Divides the value of integer by 2
+
+        decimal++; // Adds 1 to the value of decimal
+        decimal--; // Subtracts 1 from the value of decimal
+        decimal += 5; // Adds 5 to the value of decimal
+        decimal -= 5; // Subtracts 5 from the value of decimal
+        decimal *= 2; // Multiplies the value of decimal by 2
+        decimal /= 2; // Divides the value of decimal by 2
+
+        /* int AND double variables can also be changed using ++, --, +=, -=, *=, or /=
+         * ++ adds 1 to the current variable value
+         * -- subtracts 1 from the current variable value
+         * += adds the number on the right to the current variable value
+         * -= subtracts the number on the right from the current variable value
+         * *= multiplies the current variable value by the number on the right
+         * /= divides the current variable value by the number on the right
+         */
+
         System.out.println(integer); // Prints the CURRENT value of integer
         System.out.println(decimal); // Prints the CURRENT value of decimal
         System.out.println(boole); // Prints the CURRENT value of boole
