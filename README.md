@@ -9,4 +9,4 @@
 **GENERAL INFORMATION**:  <br> 
 &emsp;&emsp;**1. CREATED BY Evan Wang**  <br> 
 &emsp;&emsp;**2. FOR teaching robotics (FRC team 6934)**  <br>
-&emsp;&emsp;**3. LAST UPDATED: 3/23/24**
+&emsp;&emsp;**3. LAST UPDATED: 3/24/24**
